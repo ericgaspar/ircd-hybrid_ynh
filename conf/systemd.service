@@ -5,10 +5,10 @@ After=network.target
  
 [Service]
 Type=forking
-User=ircd
-Group=ircd
+User=__APP__
+Group=__APP__
 PIDFile=/run/ircd/ircd.pid
-ExecStart=__INSTAL_DIR__/ircd start -logfile /var/log/ircd/ircd.log -pidfile /run/ircd/ircd-hybrid.pid -configfile __INSTALL_DIR__/ircd.conf
+ExecStart=__INSTALL_DIR__/ircd start -logfile /var/log/ircd/ircd.log -pidfile /run/ircd/ircd-hybrid.pid -configfile __INSTALL_DIR__/ircd.conf
 ExecStop=__INSTALL_DIR__/ircd stop
 Restart=always
 
