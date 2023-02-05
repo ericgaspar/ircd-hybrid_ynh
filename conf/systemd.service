@@ -9,7 +9,7 @@ User=__APP__
 Group=__APP__
 PIDFile=/run/ircd/ircd.pid
 ExecStart=__INSTALL_DIR__/bin/ircd start -logfile /var/log/ircd/ircd.log -configfile __INSTALL_DIR__/ircd.conf -pidfile /run/ircd/ircd-hybrid.pid
-ExecStop=__INSTALL_DIR__/ircd stop
+ExecStop=__INSTALL_DIR__/bin/ircd stop
 Restart=always
 
 [Install]
