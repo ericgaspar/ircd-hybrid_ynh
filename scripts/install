@@ -68,7 +68,7 @@ ynh_use_logrotate
 #=================================================
 ynh_script_progression --message="Adding a configuration file..." --weight=1
 
-ynh_add_config --template="some_config_file" --destination="$install_dir/ircd.conf"
+ynh_add_config --template="../conf/ircd.conf" --destination="$install_dir/ircd.conf"
 
 chmod 650 "$install_dir/ircd.conf"
 chown $app:$app "$install_dir/ircd.conf"
