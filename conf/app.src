@@ -1,5 +1,5 @@
-SOURCE_URL=http://prdownloads.sourceforge.net/ircd-hybrid/ircd-hybrid-8.2.43.tgz
-SOURCE_SUM=bd0373c780e308c1a6f6989015ff28e1c22999ef764b7b68636b628573c251ef
+SOURCE_URL=https://github.com/ircd-hybrid/ircd-hybrid/archive/8.2.43.tar.gz
+SOURCE_SUM=bdde417ed312a01e474812fb56c2450d1b2763408a8b83321038c9c59ba32849
 SOURCE_SUM_PRG=sha256sum
 SOURCE_FORMAT=tar.gz
 SOURCE_IN_SUBDIR=true

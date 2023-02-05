@@ -11,7 +11,7 @@ maintainers = ["eric_G"]
 
 [upstream]
 license = "free"
-website = "https://example.com"
+website = "https://www.ircd-hybrid.org/"
 demo = "https://demo.example.com"
 admindoc = "https://yunohost.org/packaging_apps"
 userdoc = "https://yunohost.org/apps"
