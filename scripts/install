@@ -49,6 +49,10 @@ pushd "$tempdir"
 	make && make install
 popd
 
+pushd "$install_dir/bin"
+	./mkpasswd $password
+popd
+
 chown -R $app:$app "$install_dir"
 
 #=================================================
