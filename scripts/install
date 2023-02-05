@@ -29,6 +29,7 @@ source /usr/share/yunohost/helpers
 # $app is the app id (i.e. 'example' for first install, 
 # or 'example__2', '__3', ... for multi-instance installs)
 #
+password=$YNH_APP_ARG_PASSWORD
 
 #=================================================
 # APP "BUILD" (DEPLOYING SOURCES, VENV, COMPILING ETC)
