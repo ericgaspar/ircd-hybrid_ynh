@@ -15,7 +15,7 @@ website = "https://www.ircd-hybrid.org/"
 demo = "https://demo.example.com"
 admindoc = "https://yunohost.org/packaging_apps"
 userdoc = "https://yunohost.org/apps"
-code = "https://some.forge.com/example/example"
+code = "https://github.com/ircd-hybrid/ircd-hybrid"
 
 [integration]
 yunohost = ">= 11.1.5"
