@@ -35,15 +35,18 @@ source /usr/share/yunohost/helpers
 #=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE
 #=================================================
-ynh_script_progression --message="Setting up source files..." --weight=1
+ynh_script_progression --message="Setting up source files..." --weight=5
+
+tempdir="$(mktemp -d)"
+
+ynh_setup_source --dest_dir=$tempdir
 
 # Download, check integrity, uncompress and patch the source from app.src
 ynh_setup_source --dest_dir="$install_dir"
 
-pushd "$install_dir"
+pushd "$tempdir"
 	./configure --prefix="$install_dir"
-	make
-	make install
+	make && make install
 popd
 
 chown -R $app:$app "$install_dir"
