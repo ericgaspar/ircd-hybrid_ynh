@@ -6,15 +6,4 @@ test_format = 1.0
     # Tests to run
     # ------------
 
-    exclude = ["install.private", "install.multi"]
-
-    # -------------------------------
-    # Default args to use for install
-    # -------------------------------
-
-    # -------------------------------
-    # Commits to test upgrade from
-    # -------------------------------
-
-    test_upgrade_from.00a1a6e7.name = "Upgrade from 5.4"
-    test_upgrade_from.00a1a6e7.args.foo = "bar"
+    exclude = [ "install.subdir", "install.nourl", "install.multi", "upgrade.someCommitId" ]

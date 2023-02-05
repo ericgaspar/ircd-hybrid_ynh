@@ -34,7 +34,6 @@ fi
 
 chown -R $app:www-data "$install_dir"
 
-
 #=================================================
 # REAPPLY SYSTEM CONFIGURATIONS
 #=================================================
@@ -42,12 +41,9 @@ ynh_script_progression --message="Upgrading system configurations related to $ap
 
 ynh_add_systemd_config
 
-yunohost service add $app --description="A short description of the app" --log="/var/log/$app/$app.log"
+yunohost service add $app --description="IRC Server" --log="/var/log/ircd/ircd.log"
 
 ynh_use_logrotate --non-append
-
-ynh_add_fail2ban_config --logpath="/var/log/nginx/${domain}-error.log" --failregex="Regex to match into the log for a failed login"
-
 
 #=================================================
 # RECONFIGURE THE APP (UPDATE CONF, APPLY MIGRATIONS, ...)

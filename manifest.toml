@@ -45,6 +45,13 @@ ram.runtime = "50M"
 
     [resources.install_dir]
 
+    [resources.ports]
+    main.default = 6667
+    main.exposed = "TCP"
+
+    secure.default = 6697
+    secure.exposed = "TCP"
+
     [resources.permissions]
     main.url = "/"
 

@@ -56,7 +56,7 @@ ynh_script_progression --message="Adding system configurations related to $app .
 # Create a dedicated systemd config
 ynh_add_systemd_config
 
-yunohost service add $app --description="A short description of the app" --log="/var/log/$app/$app.log"
+yunohost service add $app --description="IRC Server" --log="/var/log/ircd/ircd.log"
 
 # Use logrotate to manage application logfile(s)
 ynh_use_logrotate
@@ -68,10 +68,10 @@ ynh_use_logrotate
 #=================================================
 ynh_script_progression --message="Adding a configuration file..." --weight=1
 
-ynh_add_config --template="some_config_file" --destination="/etc/ircd-hybrid/ircd.conf"
+ynh_add_config --template="some_config_file" --destination="$install_dir/ircd.conf"
 
-chmod 400 "/etc/ircd-hybrid/ircd.conf"
-chown $app:$app "/etc/ircd-hybrid/ircd.conf"
+chmod 650 "$install_dir/ircd.conf"
+chown $app:$app "$install_dir/ircd.conf"
 
 #=================================================
 # GENERIC FINALIZATION
@@ -81,7 +81,7 @@ chown $app:$app "/etc/ircd-hybrid/ircd.conf"
 ynh_script_progression --message="Starting a systemd service..." --weight=1
 
 # Start a systemd service
-ynh_systemd_action --service_name=$app --action="start" --log_path="/var/log/$app/$app.log"
+ynh_systemd_action --service_name=$app --action="start" --log_path="/var/log/ircd/ircd.log"
 
 #=================================================
 # END OF SCRIPT
